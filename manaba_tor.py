@@ -10,14 +10,16 @@ def get_tor_session():
 
     return session
 
+login = input("loginid":)
+passwd = input("passwd":)
 session = get_tor_session()
 url2 = "http://httpbin.org/ip"
 url = "https://www.ac04.tamacc.chuo-u.ac.jp/ActiveCampus/module/Login.php"
 data = {
     "mode":"Login",
     "clickcheck":0,
-    "login":"18D8104032K",
-    "passwd":"kishimoto1"
+    "login":login,
+    "passwd":passwd
 }
 
 res = session.post(url,data=data)
